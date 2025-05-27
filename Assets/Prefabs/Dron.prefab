@@ -97,5 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78828a7d27ca05488809b4cc697aa40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 5
   baseHome: {fileID: 0}
+  targetResource: {fileID: 0}
+  selfTrans: {fileID: 3256511133515239869}
+  isMoving: 0
