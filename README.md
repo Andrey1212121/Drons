@@ -11,3 +11,8 @@
 Для поиска ресурса использовано действия с векторами
 Для отображения пути компонент Trail Renderer
 Для ожидания сбора использовалось Corotine
+
+Скрины:
+![image](https://github.com/user-attachments/assets/58a04efe-88ec-4212-9e30-e015a7c20a9c)
+
+![image](https://github.com/user-attachments/assets/802042a4-3828-4177-9497-774ce5e32b1a)
