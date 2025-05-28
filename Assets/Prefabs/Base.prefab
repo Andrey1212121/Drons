@@ -98,7 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Blue
-  colorBase: {r: 0, g: 0.2048912, b: 1, a: 0}
+  colorDron: {r: 0, g: 1, b: 0.8937981, a: 1}
+  colorBase: {r: 0, g: 0.2048912, b: 1, a: 1}
+  colorScore: {r: 0.75218964, g: 0, b: 1, a: 1}
+  spriteRenderer: {fileID: 8157244708241441547}
   numDrons: 1
   transform: {fileID: 0}
   score: 0

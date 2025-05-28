@@ -45,13 +45,9 @@ public class Dron : MonoBehaviour
                 UnLoadResource();
             }
         }
-        else
-        {
-            FindResource();
-        }
     }
 
-    private void FindResource()
+    public void FindResource()
     {
         //Debug.Log("find resource");
         Resource[] allResource = FindObjectsOfType<Resource>();
@@ -76,12 +72,19 @@ public class Dron : MonoBehaviour
         {
             targetResource = selectedResource;
             targetResource.isSelect = true;
-            isMoving = true; 
+            isMoving = true;
+            return;
         }
         else
         {
-            //Debug.Log("Ресурсов нет");
+            StartCoroutine(WaitBeforeFindResource());
         }
+    }
+
+    private IEnumerator WaitBeforeFindResource()
+    {
+        yield return new WaitForSeconds(1f);
+        FindResource();
     }
 
     private void MoveTowards(Vector3 targetPos)
@@ -95,6 +98,7 @@ public class Dron : MonoBehaviour
         if (!isLooting && targetResource != null)
         {
             StartCoroutine(LootCoroutine());
+            Debug.Log("Wait looting;");
         }
     }
 
@@ -102,9 +106,9 @@ public class Dron : MonoBehaviour
     {
         isLooting = true;
 
-        // Можно добавить анимацию или эффект лутания здесь
+    
         yield return new WaitForSeconds(2f);
-
+        Debug.Log("Go home");
         Destroy(targetResource.gameObject);
         targetResource = null;
 
