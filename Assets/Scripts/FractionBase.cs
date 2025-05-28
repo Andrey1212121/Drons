@@ -32,16 +32,6 @@ public class FractionBase : MonoBehaviour
 
     }
 
-
-    public void ChangeSpeed(int newSpeed)
-    {
-        foreach (var dron in dronsArr)
-        {
-            dron.GetComponent<Dron>().speed = newSpeed;
-        }
-
-    }
-
     public void AddScore()
     {
         score++;
