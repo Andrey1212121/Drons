@@ -6,9 +6,7 @@ public class FractionBase : MonoBehaviour
 {
     public string name;
     public Color colorDron;
-    //public Color colorBase;
-    //public Color colorScore;
-    //public SpriteRenderer spriteRenderer;
+
     public int numDrons = 1;
 
     public Transform transform;
@@ -32,14 +30,8 @@ public class FractionBase : MonoBehaviour
             dronsArr[i].GetComponent<Dron>().enabled = false;
         }
 
-
     }
 
-    
-    void Update()
-    {
-
-    }
 
     public void ChangeSpeed(int newSpeed)
     {
@@ -53,9 +45,6 @@ public class FractionBase : MonoBehaviour
     public void AddScore()
     {
         score++;
-        //spriteRenderer.color = colorScore;
-        //spriteRenderer.color = colorBase;
-
     }
 
     public void SetNumDrons(float nums)
